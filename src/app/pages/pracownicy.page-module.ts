@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { OamebachPage } from './oamebach.page';
+import { PracownicyPage } from './pracownicy.page';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
         {
           path: '',
-          component: OamebachPage,
+          component: PracownicyPage,
         }
       ])],
-  	declarations: [OamebachPage],
+  	declarations: [PracownicyPage],
   	providers: [],
   	exports: [] })
-export class OamebachPageModule {
+export class PracownicyPageModule {
 }

@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { OnasPageModule } from './pages/onas.page-module';
+import { PracownicyPageModule } from './pages/pracownicy.page-module';
 import { HomePageModule } from './pages/home.page-module';
-import { OamebachPageModule } from './pages/oamebach.page-module';
 
-const routes: Routes = [{ 
-        path: 'Home', 
-        loadChildren: () => HomePageModule
+const routes: Routes = [
+  { 
+        path: 'onas', 
+        loadChildren: () => OnasPageModule
       },
   { 
-        path: 'home', 
-        loadChildren: () => HomePageModule
+        path: 'pracownicy', 
+        loadChildren: () => PracownicyPageModule
       },
   { 
-        path: 'oamebach', 
-        loadChildren: () => OamebachPageModule
+        path: '', 
+        loadChildren: () => HomePageModule
       }
 ];
 
