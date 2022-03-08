@@ -1,13 +1,20 @@
-<h1>Szczegóły pracownika{{(params$ | async)?.name}}
+<br><div class="d-flex align-items-start p-3 mb-2 bg-secondary text-white">
+</div>
+
+<h1>Szczegóły pracownika {{(params$ | async)?.name}}
 </h1>
 
 <div>Ta strona wyświetla szczegóły pracownika: {{(params$ | async)?.name}}</div>
-
+<br>
 
 
 <div class="d-flex align-items-start p-3 mb-2 bg-secondary text-white">
-    <button [routerLink]="'/'" class="nav-link -3 mb-2 bg-dark text-white" id="v-pills-profile-tab"
+    <button [routerLink]="'/pracownik'" style=margin:5px class="nav-link -3 mb-2 bg-dark text-white" id="v-pills-profile-tab" data-bs-toggle="pill"
+        data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+        aria-selected="false">Powrót do Nasz Team
+    </button><button [routerLink]="'/'" style=margin:5px class="nav-link -3 mb-2 bg-dark text-white" id="v-pills-profile-tab"
         data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
         aria-selected="false">Wróć do strony głównej
     </button>
 </div>
+
