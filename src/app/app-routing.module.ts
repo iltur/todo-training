@@ -4,6 +4,7 @@ import { OnasPageModule } from './pages/onas.page-module';
 import { HomePageModule } from './pages/home.page-module';
 import { PracownicyPageModule } from './pages/pracownicy.page-module';
 import { PracownikDetailsPageModule } from './pages/pracownik-details.page-module';
+import { ContactPageModule } from './pages/contact.page-module';
 
 const routes: Routes = [
   { 
@@ -22,6 +23,10 @@ const routes: Routes = [
   { 
         path: 'pracownik/:name', 
         loadChildren: () => PracownikDetailsPageModule
+      },
+  { 
+        path: 'contact', 
+        loadChildren: () => ContactPageModule
       }
 ];
 
