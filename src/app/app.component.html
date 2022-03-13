@@ -12,14 +12,27 @@
 
 <div class="d-flex align-items-start">
     
-        <button style=margin:5px; 
-            [routerLink]="'./onas'"
-            class="nav-link p-3 mb-2 bg-danger text-white fw-bold" 
+         <button 
+            style=margin:5px; 
+            [routerLink]="'./'" 
+            class="nav-link p-3 mb-2 bg-danger text-white fw-bold"
             id="v-pills-profile-tab" 
             data-bs-toggle="pill" 
-            data-bs-target="#v-pills-profile"
+            data-bs-target="#v-pills-profile" 
             type="button" 
-            role="tab" 
+            role="tab"
+            aria-controls="v-pills-profile" 
+            aria-selected="false">STRONA GŁÓWNA
+        </button>
+    
+        <button style=margin:5px; 
+            [routerLink]="'./onas'" 
+            class="nav-link p-3 mb-2 bg-danger text-white fw-bold"
+            id="v-pills-profile-tab"
+            data-bs-toggle="pill" 
+            data-bs-target="#v-pills-profile" 
+            type="button" 
+            role="tab"
             aria-controls="v-pills-profile" 
             aria-selected="false">O NAS
         </button>

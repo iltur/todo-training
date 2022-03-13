@@ -7,7 +7,5 @@ import { ActivatedRoute } from '@angular/router';
     encapsulation: ViewEncapsulation.None, 
     changeDetection: ChangeDetectionStrategy.OnPush })
 export class OurTeamComponent {
-    params$ = this._activatedRoute.params;
-    constructor(private _activatedRoute: ActivatedRoute) {}
     
 }

@@ -16,6 +16,11 @@ const routes: Routes = [
         path: '', 
         loadChildren: () => HomePageModule
       },
+
+  { 
+        path: 'home', 
+        loadChildren: () => HomePageModule
+      },
   { 
         path: 'pracownik', 
         loadChildren: () => PracownicyPageModule
