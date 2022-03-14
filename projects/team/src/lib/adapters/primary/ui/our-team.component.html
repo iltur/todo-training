@@ -3,9 +3,9 @@
 <br>
 <div class="container">
     <div class="row">
-        <div class="col" align="justify" *ngFor="let employee of employees">
+        <div class="col" align="justify" *ngFor="let employee of employees$ | async">
             <div class="card" style="width: 18rem;">
-                <img [src]="employee.src"
+                <img [src]="employee.image"
                     width="400" height="210" class="card-img-top" [alt]="employee.alt">
                 <div class="card-body">
                     <h4 class="card-title fw-bold"> {{employee.name}}<br>{{employee.position}}</h4>
