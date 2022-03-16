@@ -19,7 +19,12 @@
     "paths": {
       "@messages":["projects/messages/src/public-api.ts"],
 
-      "@team": ["projects/team/src/public-api.ts"]
+      "@team": [
+        "projects/team/src/public-api.ts"
+      ],
+      "@navigation": [
+       "projects/navigation/src/public-api.ts"
+      ]
   
     }
   },
