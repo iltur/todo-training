@@ -9,6 +9,9 @@
                     width="400" height="210" class="card-img-top" [alt]="employee.alt">
                 <div class="card-body">
                     <h4 class="card-title fw-bold"> {{employee.name}}<br>{{employee.position}}</h4>
+                    <p class="fw-bold" *ngFor="let department of employee.department">
+                        Dział: {{department.name}} <br>
+                        Numer: {{department.employeeCount}}</p>
                     <p class="card-text">Lorem ipsum dolor sit amet pede. Fusce venenatis augue sit amet augue. Duis non
                         leo. Quisque porta urna..</p>
                     <a [routerLink]="employee.detail" class="btn btn-primary">Szczegóły</a>

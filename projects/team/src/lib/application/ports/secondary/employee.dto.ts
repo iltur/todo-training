@@ -1,4 +1,5 @@
 import { Url } from "url";
+import { DepartmentDTO } from "./department.dto";
 
 export interface EmployeeDTO {
   readonly image: string;
@@ -6,4 +7,5 @@ export interface EmployeeDTO {
   readonly name: string;
   readonly position: string;
   readonly detail: string;
+  readonly department: DepartmentDTO[];
 }
