@@ -12,6 +12,6 @@ export class FirebaseEmployeesService implements GetsAllEmployeeDtoPort {
   }
 
   getAll(criterion: Partial<EmployeeDTO>): Observable<EmployeeDTO[]> {
-    return this._client.collection<EmployeeDTO>('employees').valueChanges(({idField: 'id'})).pipe(map((data: EmployeeDTO[]) => filterByCriterion(data, criterion)));
+    return this._client.collection<EmployeeDTO>('employee-list').valueChanges(({ idField: 'id' })).pipe(map((data: EmployeeDTO[]) => filterByCriterion(data, criterion)));
   }
 }
