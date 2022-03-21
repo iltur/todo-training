@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { NavbarComponentModule } from '@navigation';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { NavbarComponentModule } from '@navigation';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    NavbarComponentModule
+    NavbarComponentModule,
+    AngularFireModule.initializeApp(environment.firestoreConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
