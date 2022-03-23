@@ -1,2 +1,11 @@
-<h1>TEST</h1>
-<ul><li *ngFor="let item of employeeList$ | async"> {{ item | json }} </li></ul>
+<h1>TEST POBIERANIA DANYCH Z FIREBASE</h1>
+<ul><li *ngFor="let item of employeeList$ | async"> 
+        <img [src]="item.image" width="380" height="250"><br>
+<h3><b>{{ item.name }}</b></h3>
+<h4><b>{{ item.position }} </b></h4><br>
+<b>Szczegóły:</b> {{ item.detail}}<br>
+<b>Dział:</b> {{ item.department.name }} <br>
+<b>Numer:</b> {{ item.department.employeeCount }}
+
+</li>
+</ul>
