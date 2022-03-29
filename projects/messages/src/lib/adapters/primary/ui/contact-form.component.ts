@@ -1,15 +1,28 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject } from '@angular/core';
+import { ADDS_MESSAGE_DTO, AddsMessageDtoPort } from '../../../application/ports/secondary/adds-message.dto-port';
 
-@Component({ selector: 'lib-contact-form', templateUrl: './contact-form.component.html', encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush })
+@Component({
+  selector: 'lib-contact-form',
+  templateUrl: './contact-form.component.html',
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+
 export class ContactFormComponent {
-  readonly messageForm: FormGroup = new FormGroup
-  ({email: new FormControl(), 
-    text: new FormControl()});
+  readonly sendMessage: FormGroup = new FormGroup({
+    email: new FormControl(),
+    name: new FormControl()
+  });
 
-  onFormSubmited(messageForm: FormGroup): void { 
-      alert('email: '+messageForm.get('email').value+'\n'+'text: '+messageForm.get('text').value);
-      console.log('email: '+messageForm.get('email').value+'\n'+'text: '+messageForm.get('text').value);
-    }
+  constructor(@Inject(ADDS_MESSAGE_DTO) private _addsMessageDto: AddsMessageDtoPort) {
   }
 
+  onSendMessageSubmited(sendMessage: FormGroup): void {
+    this._addsMessageDto.add({
+      email: sendMessage.get('email').value,
+      name: sendMessage.get('name').value,
+    });
+  }
+
+}
