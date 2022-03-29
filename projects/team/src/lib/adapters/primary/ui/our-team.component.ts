@@ -17,6 +17,7 @@ export class OurTeamComponent {
             name: "HUGO",
             position: "PREZES STADA",
             detail: "/pracownik/Hugo",
+            id: 1,
             department: [{
                 name: "Cavalier",
                 employeeCount: 1,
@@ -29,6 +30,7 @@ export class OurTeamComponent {
             name: "CIASTEK",
             position: "VICE PREZES STADA",
             detail: '/pracownik/Ciastek',
+            id: 2,
             department: [{
                 name: "Cavalier",
                 employeeCount: 2,
@@ -41,6 +43,7 @@ export class OurTeamComponent {
             name: "LOLA",
             position: "SKARBNIK STADA",
             detail: "/pracownik/Lola",
+            id: 1,
             department: [{
                 name: "Cavalier",
                 employeeCount: 3,
