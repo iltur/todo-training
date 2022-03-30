@@ -10,7 +10,7 @@ export class TestPustyComponent {
   employeeList$: Observable<EmployeeDTO[]> = this._getsAllEmployeeDto.getAll()
     .pipe(
       map((employeeList: EmployeeDTO[]) =>
-        employeeList.sort((a, b) => a.id - b.id).reverse()
+        employeeList.sort((a, b) => a.order - b.order)
       )
     );
 
