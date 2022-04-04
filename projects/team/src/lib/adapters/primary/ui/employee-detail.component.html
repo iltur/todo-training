@@ -1,5 +1,4 @@
-<h1>Szczegóły pracownika {{(params$ | async)?.name}}
-</h1>
 
-<div>Ta strona wyświetla szczegóły pracownika: {{(params$ | async)?.name}}</div>
-<br>
+<h1> Szczegóły pracownika </h1><br>
+
+{{ employee$ | async | json}}
