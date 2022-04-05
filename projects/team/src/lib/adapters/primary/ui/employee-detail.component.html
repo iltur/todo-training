@@ -1,4 +1,21 @@
 
-<h1> Szczegóły pracownika </h1><br>
+
+<h1 class="fw-bold"> Szczegóły pracownika </h1><br>
+
+<div class="vstack gap-3" >
+    <div class="bg-danger border text-white fw-bold"><h1>{{ (employee$ | async).name}}</h1></div>
+    <div class="bg-warning border">
+        <h2>{{ (employee$ | async).position }}</h2>
+    </div>
+    <div class="bg-light border">
+        <img [src]="(employee$ | async).image"  width="50%" height="auto">
+    </div>
+    <div class="bg-light border">
+        <h3>{{ (employee$ | async).detail}}</h3>
+    </div>
+</div> <br><br><br><br><br><br>
+
+
+PRÓBA WYŚWIETLANIA
 
 {{ employee$ | async | json}}
