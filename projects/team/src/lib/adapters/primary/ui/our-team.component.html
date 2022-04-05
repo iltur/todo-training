@@ -3,18 +3,17 @@
 <br>
 <div class="container">
     <div class="row">
-        <div class="col" align="justify" *ngFor="let employee of employees$ | async">
+        <div class="col" align="justify" *ngFor="let employee of employeeList$ | async">
             <div class="card" style="width: 18rem;">
                 <img [src]="employee.image"
                     width="400" height="210" class="card-img-top" [alt]="employee.alt">
                 <div class="card-body">
                     <h4 class="card-title fw-bold"> {{employee.name}}<br>{{employee.position}}</h4>
-                    <p class="fw-bold" *ngFor="let department of employee.department">
-                        Dział: {{department.name}} <br>
-                        Numer: {{department.employeeCount}}</p>
+                        Dział: {{employee.department.name}} <br>
+                        Numer: {{employee.department.employeeCount}}
                     <p class="card-text">Lorem ipsum dolor sit amet pede. Fusce venenatis augue sit amet augue. Duis non
                         leo. Quisque porta urna..</p>
-                    <a [routerLink]="employee.detail" class="btn btn-primary">Szczegóły</a>
+                    <a [routerLink]="'/pracownik/'+employee.id" class="btn btn-primary">Szczegóły</a>
 
                 </div>
             </div>

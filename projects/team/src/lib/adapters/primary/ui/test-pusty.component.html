@@ -5,7 +5,9 @@
 <h4><b>{{ item.position }} </b></h4><br>
 <b>Szczegóły:</b> {{ item.detail}}<br>
 <b>Dział:</b> {{ item.department.name }} <br>
-<b>Numer:</b> {{ item.department.employeeCount }}
+<b>Numer:</b> {{ item.department.employeeCount }}<br>
+
+<a [routerLink]="'/pracownik/'+item.id" class="btn btn-primary">Szczegóły</a>
 
 </li>
 </ul>
