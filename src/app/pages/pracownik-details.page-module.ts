@@ -14,7 +14,8 @@ import { FirebaseEmployeesServiceModule } from '@team';
       }
     ]),
     EmployeeDetailComponentModule,
-    FirebaseEmployeesServiceModule
+    FirebaseEmployeesServiceModule,
+
   ],
   declarations: [PracownikDetailsPage],
   providers: [],

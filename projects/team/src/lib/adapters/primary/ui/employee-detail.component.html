@@ -3,7 +3,7 @@
 <h1 class="fw-bold"> Szczegóły pracownika </h1><br>
 <div *ngIf="employee$ | async as employee">
 <div class="vstack gap-3" *ngIf="employee.name; else empty">
-    <div class="bg-danger border text-white fw-bold"><h1>{{ employee.name}}</h1></div>
+    <div class="bg-danger border text-white fw-bold"><h1>{{ employee.name }}</h1></div>
     <div class="bg-warning border">
         <h2>{{ employee.position }}</h2>
     </div>
@@ -18,6 +18,3 @@
  <br><br><br><br><br><br>
 <ng-template #empty> <h1 style="color:red">NIESTETY, NIE MAMY TAKIEGO PRACOWNIKA :(</h1> </ng-template>
 
-<!-- PRÓBA WYŚWIETLANIA
-
-{{ employee$ | async | json}} -->

@@ -9,4 +9,5 @@ export interface EmployeeDTO {
   readonly detail: string;
   readonly department: DepartmentDTO[];
   readonly order?;
+  readonly id?;
 }
