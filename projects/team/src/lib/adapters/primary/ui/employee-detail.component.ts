@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { EmployeeDTO } from '../../../application/ports/secondary/employee.dto';
 import { GETS_ONE_EMPLOYEE_DTO, GetsOneEmployeeDtoPort } from '../../../application/ports/secondary/gets-one-employee.dto-port';
 
@@ -8,7 +9,7 @@ import { GETS_ONE_EMPLOYEE_DTO, GetsOneEmployeeDtoPort } from '../../../applicat
 export class EmployeeDetailComponent {
   employee$: Observable<EmployeeDTO> = this._getsOneEmployeeDto.getOne(
     this._activatedRoute.snapshot.params.employeeId
-  );
+  ).pipe(tap(x => console.log(x)));
 
   constructor(@Inject(GETS_ONE_EMPLOYEE_DTO)
   private _getsOneEmployeeDto: GetsOneEmployeeDtoPort,
